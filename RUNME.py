@@ -28,6 +28,10 @@
 
 # COMMAND ----------
 
+%pip install databricks-sdk==0.1.7
+
+# COMMAND ----------
+
 from solacc.companion import NotebookSolutionCompanion
 
 # COMMAND ----------
