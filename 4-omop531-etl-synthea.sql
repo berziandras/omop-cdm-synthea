@@ -22,7 +22,7 @@
 -- MAGIC project_name='omop-cdm-100K'
 -- MAGIC omop_version="OMOP531"
 -- MAGIC  
--- MAGIC with open(f'/tmp/{project_name}_configs.json','r') as f:
+-- MAGIC with open(f'/dbfs/tmp/{project_name}_configs.json','r') as f:
 -- MAGIC     paths = json.load(f)
 -- MAGIC     base_path = paths['base_path']
 -- MAGIC     delta_path = paths['delta_path']
@@ -47,6 +47,7 @@
 -- COMMAND ----------
 
 -- MAGIC %py
+-- MAGIC sql(f"USE CATALOG omop_synthea;")
 -- MAGIC sql(f"USE {omop_version};")
 -- MAGIC print(f"Using OMOP version {omop_version}")
 
