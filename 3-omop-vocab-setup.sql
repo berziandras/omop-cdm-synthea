@@ -24,6 +24,7 @@
 -- MAGIC 
 -- MAGIC print(f"Using OMOP version {omop_version}")
 -- MAGIC print(f"Using vocabulary tables in {vocab_s3_path}")
+-- MAGIC spark.sql(f"USE CATALOG omop_synthea;")
 -- MAGIC spark.sql(f"USE {omop_version}")
 -- MAGIC 
 -- MAGIC display(dbutils.fs.ls(vocab_s3_path))
