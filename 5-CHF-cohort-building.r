@@ -33,7 +33,8 @@
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC USE OMOP531
+# MAGIC USE CATALOG omop_synthea;
+# MAGIC USE OMOP531;
 
 # COMMAND ----------
 
