@@ -20,6 +20,10 @@ select * from omop531.source_to_standard_vocab_map
 
 -- COMMAND ----------
 
+USE CATALOG omop_synthea;
+
+-- COMMAND ----------
+
 USE OMOP531
 
 -- COMMAND ----------
