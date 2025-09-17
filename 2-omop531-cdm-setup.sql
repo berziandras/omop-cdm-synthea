@@ -37,7 +37,7 @@
 -- MAGIC project_name='omop-cdm-100K'
 -- MAGIC omop_version="OMOP531"
 -- MAGIC  
--- MAGIC with open(f'/tmp/{project_name}_configs.json','r') as f:
+-- MAGIC with open(f'/dbfs/tmp/{project_name}_configs.json','r') as f:
 -- MAGIC     paths = json.load(f)
 -- MAGIC     base_path = paths['base_path']
 -- MAGIC     delta_path = paths['delta_path']
@@ -51,8 +51,11 @@
 
 -- DBTITLE 0,Drop Existing Database
 -- MAGIC %python
+-- MAGIC sql(f"CREATE CATALOG IF NOT EXISTS omop_synthea MANAGED LOCATION 'abfss://unity-catalog-storage@dbstoragena4mfbico7bxa.dfs.core.windows.net/8574552679251162';")
+-- MAGIC sql(f"USE CATALOG omop_synthea;")
+
 -- MAGIC sql(f"DROP DATABASE IF EXISTS {omop_version} CASCADE;")
--- MAGIC sql(f"CREATE DATABASE IF NOT EXISTS {omop_version} LOCATION '{delta_silver_path}'")
+-- MAGIC sql(f"CREATE DATABASE IF NOT EXISTS {omop_version}")
 -- MAGIC sql(f"USE {omop_version};")
 
 -- COMMAND ----------
