@@ -14,6 +14,7 @@
 # COMMAND ----------
 
 # MAGIC %sql
+# USE CATALOG omop_synthea;
 # MAGIC USE omop531;
 
 # COMMAND ----------
