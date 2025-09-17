@@ -23,7 +23,7 @@ project_name='omop-cdm-100K'
 # COMMAND ----------
 
 # DBTITLE 1,read configs
-with open(f'/tmp/{project_name}_configs.json','r') as f:
+with open(f'/dbfs/tmp/{project_name}_configs.json','r') as f:
     paths = json.load(f)
     data_path = paths['data_path']
     base_path = paths['base_path']
