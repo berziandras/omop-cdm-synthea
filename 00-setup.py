@@ -96,7 +96,7 @@ project_settings = SolAccUtil(project_name=project_name)
 
 # DBTITLE 1,write configurations for later access
 import json 
-with open(f'/tmp/{project_name}_configs.json','w') as f:
+with open(f'/dbfs/tmp/{project_name}_configs.json','w') as f:
   f.write(json.dumps(project_settings.settings,indent=4))
 f.close()
 
